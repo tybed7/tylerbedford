@@ -1,4 +1,6 @@
-# TBSite
+# Tyler Bedford's Blog
+
+My personal blog that details finished and current projecets that I am working on. The idea for this site is to give an overview over the technologies I have made applications in and to detail spaces of technology I have interest in learning more about.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
