@@ -40,7 +40,7 @@ const reducers = {
 };
 
 export function store(state: any, action: any) {
-  const store: ActionReducer<State> = compose(combineReducers)(reducers);
+  const store: ActionReducer<State> = compose(combineReducers, reducers);
   return store(state, action);
 }
 

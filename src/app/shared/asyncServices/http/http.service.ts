@@ -57,6 +57,5 @@ export class HttpService {
   protected responseInterceptor(observableRes: Observable<any>, adapterFn?: Function): Observable<any> {
     return observableRes
     .map(res => HttpAdapter.baseAdapter(res, adapterFn))
-    .catch((err, source) => this.responseHandler.onCatch(err, source));
   }
 }

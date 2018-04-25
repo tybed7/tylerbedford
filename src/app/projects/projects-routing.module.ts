@@ -9,7 +9,7 @@ const projectsRoutes: Routes = [
     path: 'projects',
     component: ProjectComponent,
     data: {
-      name: 'product-list'
+      name: 'project'
     }
   },
   {
