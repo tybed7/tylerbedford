@@ -5,7 +5,7 @@ import { AppSandbox } from './app.sandbox';
 @Component({
   selector: 'app-root',
   template: '<router-outlet></router-outlet>',
-  styleUrls: ['./app.component.css']
+  providers: [AppSandbox]
 })
 export class AppComponent {
   title = 'Tyler Bedford';
