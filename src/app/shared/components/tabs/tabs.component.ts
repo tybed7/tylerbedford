@@ -4,7 +4,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     selector: 'tabs',
     template: `
         <div>
-            <h1>About Me Template</h1>
+            <h1> Tabs Template </h1>
         </div>
     `,
     styleUrls: ['./tabs.component.scss'],

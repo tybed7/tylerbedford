@@ -1,0 +1,24 @@
+{
+  "api": {
+    "baseUrl": "/api"
+  },
+
+  "paths": {
+  },
+ 
+ 
+
+  "notifications": {
+    "options": {
+      "timeOut": 5000,
+      "showProgressBar": true,
+      "pauseOnHover": true,
+      "position": ["top", "right"],
+      "theClass": "sy-notification"
+    },
+    "unauthorizedEndpoints": ["api/projects"],
+    "notFoundEndpoints": ["api/projects"]
+  },
+  
+  "debugging": false
+}

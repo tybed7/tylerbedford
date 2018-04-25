@@ -23,6 +23,38 @@ import * as fromProjectList  from './reducers/projectList.reducer';
  * our top level state interface is just a map of keys to inner state types.
  */
 export interface State {
-  products:       fromProject.State;
-  productDetails: fromProjectList.State;
+  project:       fromProject.State;
+  projectList:   fromProjectList.State;
 }
+
+/**
+ * Because metareducers take a reducer function and return a new reducer,
+ * we can use our compose helper to chain them together. Here we are
+ * using combineReducers to make our top level reducer, and then
+ * wrapping that in storeLogger. Remember that compose applies
+ * the result from right to left.
+ */
+const reducers = {
+  project:       fromProject.reducer,
+  projectList:   fromProjectList.reducer
+};
+
+export function store(state: any, action: any) {
+  const store: ActionReducer<State> = compose(combineReducers)(reducers);
+  return store(state, action);
+}
+
+
+//Project store functions
+export const getProjectState = (state: State) => state.project;
+export const getProjectLoaded  = createSelector(getProjectState, fromProject.getLoaded);
+export const getProjectLoading = createSelector(getProjectState, fromProject.getLoading);
+export const getProjectFailed  = createSelector(getProjectState, fromProject.getFailed);
+export const getProjectData    = createSelector(getProjectState, fromProject.getData);
+
+//Project List store functions
+export const getProjectListState = (state: State) => state.projectList;
+export const getProjectListLoaded  = createSelector(getProjectListState, fromProjectList.getLoaded);
+export const getProjectListLoading = createSelector(getProjectListState, fromProjectList.getLoading);
+export const getProjectListFailed  = createSelector(getProjectListState, fromProjectList.getFailed);
+export const getProjectListData    = createSelector(getProjectListState, fromProjectList.getData);

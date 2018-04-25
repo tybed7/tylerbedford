@@ -3,13 +3,13 @@ import { Project }  from '../../models';
 import { type }     from '../../utility';
 
 export const ActionTypes = {
-  LOAD:         type('[Product Details] Load'),
-  LOAD_SUCCESS: type('[Product Details] Load Success'),
-  LOAD_FAIL:    type('[Product Details] Load Fail')
+  LOAD:         type('[Project Details] Load'),
+  LOAD_SUCCESS: type('[Project Details] Load Success'),
+  LOAD_FAIL:    type('[Project Details] Load Fail')
 };
 
 /**
- * Product Actions
+ * Project Actions
  */
 export class LoadAction implements Action {
   type = ActionTypes.LOAD;
