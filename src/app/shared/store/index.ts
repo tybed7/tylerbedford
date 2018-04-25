@@ -23,8 +23,6 @@ import * as fromProjectList  from './reducers/projectList.reducer';
  * our top level state interface is just a map of keys to inner state types.
  */
 export interface State {
-  settings:       fromSettings.State;
-  login:          fromAuth.State;
-  products:       fromProducts.State;
-  productDetails: fromProductDetails.State;
+  products:       fromProject.State;
+  productDetails: fromProjectList.State;
 }
