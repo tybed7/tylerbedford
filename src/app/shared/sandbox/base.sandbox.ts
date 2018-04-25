@@ -6,9 +6,7 @@ import * as store           from '../store';
 
 export abstract class Sandbox {
 
-  public loggedUser$: Observable<any> = this.appState$.select(store.getLoggedUser);
-  public culture$:    Observable<any> = this.appState$.select(store.getSelectedCulture);
-  public culture:     string;
+ 
 
   constructor(protected appState$: Store<store.State>) {}
 
