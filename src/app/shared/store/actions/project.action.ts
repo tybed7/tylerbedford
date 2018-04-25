@@ -3,9 +3,9 @@ import { Project }  from '../../models';
 import { type }     from '../../utility';
 
 export const ActionTypes = {
-  LOAD:         type('[Project Details] Load'),
-  LOAD_SUCCESS: type('[Project Details] Load Success'),
-  LOAD_FAIL:    type('[Project Details] Load Fail')
+  LOAD:         type('[Project] Load'),
+  LOAD_SUCCESS: type('[Project] Load Success'),
+  LOAD_FAIL:    type('[Project] Load Fail')
 };
 
 /**

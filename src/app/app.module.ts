@@ -20,6 +20,7 @@ import { AppRoutingModule }    from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.module';
 import { UtilityModule } from './shared/utility';
+import { ProjectsModule } from './projects/projects.module';
 
 //Store
 import { store }              from './shared/store';
@@ -31,7 +32,9 @@ import { store }              from './shared/store';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ProjectsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

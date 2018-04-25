@@ -1,16 +1,17 @@
-// import { Injectable }           from '@angular/core';
-// import { NotificationsService } from 'angular2-notifications';
-// import { ConfigService }        from '../../../app-config.service';
-// import { Router }               from '@angular/router';
-// import { Observable }           from 'rxjs/Observable';
+import { Injectable }           from '@angular/core';
+import { NotificationsService } from 'angular2-notifications';
+import { ConfigService }        from '../../../app-config.service';
+import { Router }               from '@angular/router';
+import { Observable }           from 'rxjs/Observable';
 
-// @Injectable()
-// export class HttpResponseHandler {
-// 	constructor(
-// 		private router: Router,
-//     private notificationsService: NotificationsService,
-//     private configService: ConfigService
-//   ) {}
+@Injectable()
+export class HttpResponseHandler {
+	constructor(
+		private router: Router,
+    private notificationsService: NotificationsService,
+    private configService: ConfigService
+  ) {}
+}
 
 //   /**
 //    * Global http error handler.
